@@ -214,6 +214,22 @@ curl -X 'POST' \
 ```
 
 
+
+### Este archivo main.py implementa una API web utilizando FastAPI que ofrece varios servicios relacionados con operaciones matemáticas y búsqueda, con un sistema de autenticación básico.
+
+El propósito principal de este código es proporcionar una serie de endpoints que realizan diferentes operaciones con números, como ordenación, filtrado, suma, búsqueda del valor máximo y búsqueda binaria. Además, incluye funcionalidades de registro e inicio de sesión de usuarios.
+
+La API toma como entrada listas de números y, en algunos casos, un número objetivo. También acepta información de usuario para el registro y el inicio de sesión. Las entradas se envían en formato JSON a través de solicitudes HTTP POST.
+
+Como salida, la API devuelve los resultados de las operaciones realizadas, también en formato JSON. Por ejemplo, para la ordenación de burbuja, devuelve la lista ordenada; para el filtrado de números pares, devuelve la lista de números pares; para la suma, devuelve el total, y así sucesivamente.
+
+El código logra su propósito implementando cada operación como una función separada. Utiliza algoritmos comunes como la ordenación de burbuja y la búsqueda binaria. Para la autenticación, utiliza tokens JWT (JSON Web Tokens) para mantener las sesiones de usuario.
+
+En cuanto a los flujos de lógica importantes, el código verifica la autenticación del usuario antes de realizar cualquier operación. Si el token no es válido, se devuelve un error. Además, para el registro de usuarios, se verifica si el usuario ya existe antes de crear uno nuevo, y para el inicio de sesión, se comprueba si las credenciales son correctas antes de generar un token.
+
+En resumen, este código crea una API web que ofrece servicios matemáticos básicos y de búsqueda, con un sistema de autenticación simple, proporcionando una plataforma segura para realizar estas operaciones a través de internet.
+
+
 ## Correr Pruebas
 Para validar la funcionalidad de tu API, utiliza pytest para ejecutar el módulo de pruebas automatizadas. Asegúrate de estar en el directorio raíz del proyecto y ejecuta:
 ```
