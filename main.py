@@ -12,7 +12,6 @@ app = FastAPI()
 class Payload(BaseModel):
     numbers: List[int]
 
-
 class BinarySearchPayload(BaseModel):
     numbers: List[int]
     target: int
